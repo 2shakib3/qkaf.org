@@ -30,7 +30,7 @@
                                   <label for="frist_name" class="col-md-4 col-form-label text-md-right">{{ __('Frist Name') }}</label>
 
                                   <div class="col-md-6">
-                                      <input id="frist_name" type="text" class="inp{{ $errors->has('frist_name') ? ' is-invalid' : '' }}" name="frist_name" value="{{ $user->frist_name }}" required autofocus>
+                                      <input id="frist_name" type="text" class="inp{{ $errors->has('frist_name') ? ' is-invalid' : '' }}" name="frist_name" value="{{ $user->frist_name }}" placeholder="{{ $user->frist_name }}" required autofocus>
 
                                       @if ($errors->has('frist_name'))
                                           <span class="invalid-feedback" role="alert">

@@ -16,7 +16,6 @@ cache clear
 
 Route::get('/test', function () {
     return view('Frontend.testhome');
-
 })->name('user.login');
 Auth::routes();
 /* user login Route */
@@ -53,6 +52,8 @@ Route::get('/getcategory','DependencyController@getcategory');
 Route::get('/getproduct','DependencyController@getproduct');
 Route::get('/getstate','DependencyController@getstate');
 Route::get('/getcity','DependencyController@getcity');
+Route::post('/getcart','DependencyController@getcart')->name('cart');
+Route::post('/userreg','DependencyController@userreg')->name('user.reg');
 
 /* Save billing information */
 
@@ -116,15 +117,13 @@ Route::group(['prefix' => 'admin'],function () {
 });
 
 Route::get('cart','CartController@index');
-
 Route::post('cart/add/{id}','CartController@additem');
-Route::get('cart/remove/{id}','CartController@removeitem');
+Route::get('cart/remove/{id}','CartController@remaovecartitem')->name('cart.remove');
 
 Route::get('subtotal', function () {
   return Cart::subtotal();
 
 });
-
 
 
 Route::get('clear-all', function () {

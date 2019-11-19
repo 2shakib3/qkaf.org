@@ -53,7 +53,6 @@ class RoleController extends Controller
 
         $roleDelete = Role::find($id);
         $roleDelete ->delete();
-
         return back()->with('success','Role Deleted');
 
     }

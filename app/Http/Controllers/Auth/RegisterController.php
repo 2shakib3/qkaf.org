@@ -80,7 +80,7 @@ class RegisterController extends Controller
             'frist_name' => $request->frist_name,
             'last_name' => $request->last_name,
             'country' => $request->country,
-            'address' =>$request->address,
+            'address' => $request->address,
             'city' => $request->city,
             'state' => $request->state,
             'postal_code' =>$request->postal_code,

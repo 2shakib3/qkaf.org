@@ -251,3 +251,92 @@ h2{
     color: #000;
     text-transform: uppercase;
   }
+
+  .gift_type{
+    margin-left:160px
+  }
+
+  .avoid-clicks {
+    pointer-events: none;
+  }
+  @media only screen and (max-width: 600px) {
+
+    .tab {
+        height: auto;
+    }
+    .tab a {
+        width: 32.5%;
+        display: inline-block;
+        color: inherit;
+        text-decoration: none;
+        height: auto;
+        display: inline-block;
+        }
+    .tablinks_center{
+    padding-top: 10px;
+    }
+    .tablinks_center img{
+        height: 30px;
+        width: 30px;
+    }
+
+    .tablinks_center p{
+        font-size: 14px;
+        font-weight: 600;
+        margin: 0px;
+    }
+    hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+    .tab a.active {
+        background-color: #ccc;
+        border-bottom: 10px solid red;
+        border-right: none;
+      }
+    .chose_type_of_donation{
+        padding: 5px;
+        padding-top: 5px;
+        scroll-padding-left: 5px;
+    }
+    .gift_type{
+        margin-left:10px;
+      }
+
+    .chose_amount_row{
+        padding:0px 30px;
+        min-height:100px;
+    }
+
+    .chose_amount_position{
+        position:relative;
+        min-height:100px;
+    }
+
+    .chose_amount{
+        position: absolute;
+        top: 27%;
+        right: 0px;
+    }
+
+    .chose_amount_row{
+        /* padding:0px 30px; */
+        min-height:auto;
+    }
+
+    .chose_amount_position{
+        /* position:relative; */
+        min-height:auto;
+    }
+
+
+    .chose_amount{
+        position: static !important;
+        min-height: 10px;
+    }
+
+
+}

@@ -30,13 +30,13 @@
                 <span style="padding: 10px 70px 10px 35px; font-size: 20px;" class="donate_amount">$1000</span>
             </label>
             <label>
-                    <input type="radio"  name="amount" id="onetime_amount" class="amount" onclick="onetime_input_toggle()">
-                    <span class="donate_amount" id="onetime_amount_other" style="padding: 10px 70px 10px 35px; font-size: 20px;">others</span>
+                <input type="radio"  name="amount" id="onetime_amount" class="amount" onclick="onetime_input_toggle()">
+                <span class="donate_amount" id="onetime_amount_other" style="padding: 10px 70px 10px 35px; font-size: 20px;">others</span>
             </label>
             <label>
-                    <div class="onetime_input_field" id="onetime_input_field" style="display: none;">
-                        <input type="number" name="amount_others" id="onetime_input" style="font-size: 20px; padding: 7px 5px 7px 5px; margin-left: 10px;">
-                    </div>
+                <div class="onetime_input_field" id="onetime_input_field" style="display: none;">
+                    <input type="number" name="amount_others" id="onetime_input" style="font-size: 20px; padding: 7px 5px 7px 5px; margin-left: 10px;">
+                </div>
             </label>
         </div>
     </div>

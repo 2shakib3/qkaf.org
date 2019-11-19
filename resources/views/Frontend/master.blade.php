@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href={{asset("favicon.ico")}}>
 
     <title> @yield('title') </title>
@@ -14,18 +15,11 @@
     <!-- Bootstrap core CSS -->
         <link href={{asset("dist/css/bootstrap.css")}} rel="stylesheet">
 
-
-
         <link href="{{ asset("dist/css/style.css")}}" rel="stylesheet">
 
         <link href="{{ asset("dist/css/try.css") }}" rel="stylesheet" >
-
     <!--  js -->
         <script src={{asset("dist/js/jquery-3.4.1.min.js")}}></script>
-
-
-
-
     <style media="screen">
     .bottom_nav ul{
         list-style:none;
@@ -38,6 +32,7 @@
     </style>
         <script type="text/javascript">
         	$(document).ready(function(){
+                document.getElementById('proccedtoinfo').disabled = true;
         		$(".register").click(function(){
         			$(".other").show();
         			$(".content").hide();
@@ -50,10 +45,27 @@
         			$(".login").addClass('active');
         			$(".register").removeClass('active');
         		});
+                $(".radio-inline input").click(function(){
+                    document.getElementById('proccedtoinfo').disabled = true;
+                });
+                $(".amount").click(function(){
+                    document.getElementById('proccedtoinfo').disabled = false;
+                });
+                $("#cart_button").click(function(){
+                    document.getElementById('proccedtoinfo').disabled = false;
+                });
+
+                
+
+                $("#total_amount_test").on("change", function() {
+                    document.getElementById('proccedtoinfo').disabled = false;
+                });
+                document.getElementById('total_amount_test').onchange = function () {
+                    alert('Hello ' + this.value);
+                }
+
         	});
         </script>
-
-
   </head>
 
   <body>

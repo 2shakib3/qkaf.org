@@ -29,7 +29,7 @@ class UserdashboardController extends Controller
 
     public function profileUpdate(Request $request){
 
-        $user = Auth::user();
+        $user = User::all();
 
         $this->validate($request,[
             // 'email' => ['required', 'string', 'email', 'max:255', 'unique:users','email' , . 'Auth::user()->id'],

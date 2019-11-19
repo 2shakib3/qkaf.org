@@ -32,13 +32,13 @@ class ProductController extends Controller
         $product->save();
 
         $lastId = $product->id;
-        echo $lastId;
+        // echo $lastId;
         $Imagesinfo = $request->file('Images');
         // echo "<Pre>";
         //     print_r($Imagesinfo);
         // echo "<Pre>";
         $ImagesName = $lastId.$Imagesinfo->getClientOriginalName();
-        echo $ImagesName;
+        // echo $ImagesName;
         $folder = "productImage/";
         $Imagesinfo->move($folder,$ImagesName);
         $ImagesUrl = $folder.$ImagesName;
@@ -53,7 +53,10 @@ class ProductController extends Controller
         $products = Product::all();
         return view('Fontadmin.Product.productManage',compact('products'));
     }
-
+    public function getproduct(Request $request){
+        $data = Product::all();
+        return response()->json($data);
+    }
     public function cart(Request $id)
     {
         $products = Product::find($id);

@@ -340,9 +340,9 @@ transform: skew(20deg);
 }
 
 /* When active state */
-.active{
+/* .active{
     display:block !important;
-}
+} */
 .tabs .tabs-list li.active{
     background-color:lavender !important;
     color:black !important;
